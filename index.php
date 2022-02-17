@@ -1,9 +1,10 @@
-<?php 
- include __DIR__ . "/database/dischiDb.php"
+<?php
+include __DIR__ . "/database/dischiDb.php"
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,24 +15,28 @@
     <link rel="stylesheet" href="style/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div id="app">
         <header>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/2048px-Spotify_App_Logo.svg.png" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/2048px-Spotify_App_Logo.svg.png" alt="">
         </header>
         <div class="container-card">
-        <div>
-        <div class="card-app" >
-            <div class="img">
-                <img :src="disco.poster" alt="">
-            </div>
-            <h4>{{disco.title}}</h4>
-            <p>{{disco.autor}}</p>
-            <p>{{disco.year}}</p>
+            <?php foreach ($arrayDisc as  $disc) { ?>
+                <div class="card">
+                    <div class="card-app">
+                        <div class="img">
+                            <img src=<?php echo $disc["poster"] ?> alt="">
+                        </div>
+                        <h4><?php echo $disc["title"] ?></h4>
+                        <p><?php echo $disc["author"] ?></p>
+                        <p><?php echo $disc["year"] ?></p>
+                    </div>
+                </div>
         </div>
     </div>
-        </div>
-    </div>
-  <script src="js/script.js"></script>
+<?php } ?>
+
 </body>
+
 </html>

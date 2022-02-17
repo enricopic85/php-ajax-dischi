@@ -25,3 +25,35 @@ header img{
     gap: 30px;
     justify-content: center;
 }
+
+.card{
+    display: flex;
+       justify-content: center;
+       align-items: center;
+}
+.card-app{
+    width: 180px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    background-color: rgb(68, 59, 107);
+    flex-direction: column;
+}
+.img{
+    width: 120px;
+    height: 120px;
+}
+.img img{
+    width: 100%;
+}
+h4{
+    text-transform: uppercase;
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+p{
+    color: white;
+}
