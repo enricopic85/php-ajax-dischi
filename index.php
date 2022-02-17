@@ -1,3 +1,7 @@
+<?php 
+ include __DIR__ . "/database/dischiDb.php"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +11,27 @@
     <script src=" https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
     <title>Document</title>
 </head>
 <body>
     <div id="app">
-        <h3 v-for="disco in dischi">{{disco.poster}}</h3>
+        <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/2048px-Spotify_App_Logo.svg.png" alt="">
+        </header>
+        <div class="container-card">
+        <div>
+        <div class="card-app" >
+            <div class="img">
+                <img :src="disco.poster" alt="">
+            </div>
+            <h4>{{disco.title}}</h4>
+            <p>{{disco.autor}}</p>
+            <p>{{disco.year}}</p>
+        </div>
     </div>
+        </div>
+    </div>
+  <script src="js/script.js"></script>
 </body>
 </html>

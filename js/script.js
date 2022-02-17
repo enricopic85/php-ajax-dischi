@@ -4,7 +4,7 @@ new Vue({
     },
     mounted(){
         axios.get('http://localhost/php-ajax-dischi/api/dischiApi.php').then((result)=>{       
-            this.dischi.push(result.data.response);
+             this.dischi=result.data;
         })
     }
 })
