@@ -23,20 +23,19 @@ include __DIR__ . "/database/dischiDb.php"
         </header>
         <div class="container-card">
             <?php foreach ($arrayDisc as  $disc) { ?>
-                <div class="card">
-                    <div class="card-app">
-                        <div class="img">
-                            <img src=<?php echo $disc["poster"] ?> alt="">
-                        </div>
-                        <h4><?php echo $disc["title"] ?></h4>
-                        <p><?php echo $disc["author"] ?></p>
-                        <p><?php echo $disc["year"] ?></p>
+                <div class="card" v-for="(disco,i) in dischi">
+                <div class="card-app">
+                    <div class="img">
+                        <img src=<?php echo $disc["poster"] ?> alt="">
                     </div>
+                    <h4><?php echo $disc["title"]?></h4>
+                    <p><?php echo $disc["author"]?></p>
+                    <p><?php echo $disc["year"]?></p>
                 </div>
+            </div>
+            <?php } ?>
+            
         </div>
-    </div>
-<?php } ?>
-
 </body>
 
 </html>

@@ -12,7 +12,21 @@
 </head>
 <body>
     <div id="app">
-        <h3 v-for="(disco,i) in dischi">{{disco.title}}</h3>
+        <header>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/2048px-Spotify_App_Logo.svg.png" alt="">
+        </header>
+        <div class="container-card">
+            <div class="card" v-for="(disco,i) in dischi">
+                <div class="card-app">
+                    <div class="img">
+                        <img :src="disco.poster" alt="">
+                    </div>
+                    <h4>{{disco.title}}</h4>
+                    <p>{{disco.author}}</p>
+                    <p>{{disco.year}}</p>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>
